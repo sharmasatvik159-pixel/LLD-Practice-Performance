@@ -43,6 +43,7 @@ class NumberedCanvas(canvas.Canvas):
         # Header (pages > 1)
         if self._pageNumber > 1:
             self.drawString(54, 750, "LLD Practice Platform — Technical Research Notes & Architecture")
+            self.drawRightString(558, 750, "Author: Satvik Sharma")
             self.setStrokeColor(colors.HexColor("#E2E8F0"))
             self.setLineWidth(0.75)
             self.line(54, 742, 558, 742)
@@ -187,7 +188,7 @@ def build_pdf(filename="docs/LLD_Practice_Platform_Research_Notes.pdf"):
     # Title & Metadata Header
     story.append(Paragraph("LLD Practice Platform: Architecture & Research Notes", title_style))
     story.append(Paragraph("A Scalable, Domain-Driven System for Automated Low-Level Design Evaluation", subtitle_style))
-    story.append(Paragraph("<b>Author:</b> Technical Architecture Team &nbsp;|&nbsp; <b>Status:</b> Production Ready &nbsp;|&nbsp; <b>Version:</b> 1.0.0", meta_style))
+    story.append(Paragraph("<b>Author:</b> Satvik Sharma &nbsp;|&nbsp; <b>Status:</b> Production Ready &nbsp;|&nbsp; <b>Version:</b> 1.0.0", meta_style))
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#CBD5E1"), spaceAfter=14))
 
     # Executive Summary
